@@ -8,24 +8,27 @@ import { Recipe } from "./recipe.model";
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
 
-  private recipes: Recipe[] = [ //recipe.model.ts'e göre parametre vermemiz gerek; name, description, image
-    new Recipe(
-      'Tasty Schnitzel', 
-      'A super-tasty Schnitzel - just awesome',
-      'https://i.lezzet.com.tr/images-xxlarge-recipe/et_schnitzel-acb28d38-df55-49bc-a0a3-79de31b288ca.jpg',
-      [
-        new Ingredient('Meat', 1),
-        new Ingredient('French Fries', 20)
-      ]),
-    new Recipe(
-      'Big Fat Burger', 
-      'What else you need to say',
-      'https://www.bysekerci.com/wp-content/uploads/2020/08/hamburger-menu-kastamonu-tasarim-com.jpg',
-      [
-        new Ingredient('Buns', 4),
-        new Ingredient('Meat', 1)
-      ])
-  ];
+  //recipe.model.ts'e göre parametre vermemiz gerek; name, description, image
+  // private recipes: Recipe[] = [ 
+  //   new Recipe(
+  //     'Tasty Schnitzel', 
+  //     'A super-tasty Schnitzel - just awesome',
+  //     'https://i.lezzet.com.tr/images-xxlarge-recipe/et_schnitzel-acb28d38-df55-49bc-a0a3-79de31b288ca.jpg',
+  //     [
+  //       new Ingredient('Meat', 1),
+  //       new Ingredient('French Fries', 20)
+  //     ]),
+  //   new Recipe(
+  //     'Big Fat Burger', 
+  //     'What else you need to say',
+  //     'https://www.bysekerci.com/wp-content/uploads/2020/08/hamburger-menu-kastamonu-tasarim-com.jpg',
+  //     [
+  //       new Ingredient('Buns', 4),
+  //       new Ingredient('Meat', 1)
+  //     ])
+  // ];
+
+  private recipes: Recipe[] = [];
 
   constructor(private slService: ShoppingListService) {}
 
